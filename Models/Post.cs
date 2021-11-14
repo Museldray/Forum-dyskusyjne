@@ -11,10 +11,12 @@ namespace Forum_dyskusyjne.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(70)]
-        public string Title { get; set; }
+        [MaxLength(50), MinLength(5)]
+        public string Name { get; set; }
+        [Required]
         [AllowHtml]
-        public string Text { get; set; }
+        public string Content { get; set; }
+        [Required]
         public DateTime Date { get; set; }
         public string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }

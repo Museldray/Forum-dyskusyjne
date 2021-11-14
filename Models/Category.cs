@@ -10,9 +10,8 @@ namespace Forum_dyskusyjne.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(70)]
-        public string Title { get; set; }
-        public string Text { get; set; }
-        public virtual ICollection<Subject> Subjects { get; set; }
+        [MaxLength(50), MinLength(5)]
+        public string Name { get; set; }
+        public virtual ICollection<Forum> Forums { get; set; }
     }
 }

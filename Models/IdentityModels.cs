@@ -48,9 +48,9 @@ namespace Forum_dyskusyjne.Models
         public DbSet<Message> Messeges { get; set; }
         public DbSet<Attachment> Photos { get; set; }
         public DbSet<Thread> Threads { get; set; }
-        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<Forum> Forums { get; set; }
         public DbSet<Friends> Friends { get; set; }
-        public DbSet<News> News { get; set; }
+        public DbSet<Announcement> Announcements { get; set; }
         public DbSet<Moderator> Moderators { get; set; }
         public DbSet<MessageUser> MessageUser { get; set; }
 
@@ -58,7 +58,7 @@ namespace Forum_dyskusyjne.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Friends>()
-                .HasRequired(f=>f.Friend)
+                .HasRequired(f => f.Friend)
                 .WithOptional()
                 .WillCascadeOnDelete(false);
 
