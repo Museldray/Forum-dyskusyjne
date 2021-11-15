@@ -188,9 +188,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111061505455_Init.cs" />
-    <Compile Include="Migrations\202111061505455_Init.Designer.cs">
-      <DependentUpon>202111061505455_Init.cs</DependentUpon>
+    <Compile Include="Migrations\202111151859156_Init.cs" />
+    <Compile Include="Migrations\202111151859156_Init.Designer.cs">
+      <DependentUpon>202111151859156_Init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -277,11 +277,6 @@
     <Content Include="Views\Categories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202111061505455_Init.resx">
-      <DependentUpon>202111061505455_Init.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -296,6 +291,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202111151859156_Init.resx">
+      <DependentUpon>202111151859156_Init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
