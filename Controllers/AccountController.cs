@@ -151,7 +151,15 @@ namespace Forum_dyskusyjne.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    Avatar = "", // TODO Add default avatar (Like that annonymous profile picture in facebook)
+                    RegistrationDate = DateTime.Now,
+                    Privileges = "New User",
+                    LockoutEnabled = false
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
